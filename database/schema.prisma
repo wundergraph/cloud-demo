@@ -1,0 +1,26 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("NEON_DATABASE_URL")
+}
+
+model Results {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  wpm       Int
+  accuracy  Int
+  correct   Int
+  wrong     Int
+  time      Int      @default(30)
+  userId    String?
+  User      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id        String    @id
+  email     String    @unique
+  name      String?
+  createdAt DateTime  @default(now())
+  lastLogin DateTime?
+  picture   String?
+  results   Results[]
+}

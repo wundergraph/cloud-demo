@@ -1,0 +1,34 @@
+query ($userId: String! @fromClaim(name: USERID)) {
+  db_groupByResults(by: [time], where: { userId: { equals: $userId } }) {
+    time
+    _count {
+      _all
+    }
+    _avg {
+      wpm
+      accuracy
+    }
+  }
+  db_aggregateResults(where: { userId: { equals: $userId } }) {
+    _avg {
+      wpm
+      accuracy
+    }
+    _max {
+      wpm
+      accuracy
+    }
+  }
+  db_findManyResults(
+    where: { userId: { equals: $userId } }
+    orderBy: [{ createdAt: desc }]
+  ) {
+    id
+    createdAt
+    wpm
+    accuracy
+    correct
+    wrong
+    time
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "dotenv -- turbo run build",
+    "dev": "dotenv -- turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "generate": "turbo run generate"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "turbo": "latest",
+    "prisma": "^4.7.1",
+    "dotenv-cli": "latest"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "npm@8.19.3",
+  "prisma": {
+    "schema": "database/schema.prisma"
+  }
+}

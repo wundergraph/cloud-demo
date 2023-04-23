@@ -1,0 +1,28 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**",
+        ".vercel/**",
+        "generated-wundergraph/**",
+        "generated/**"
+      ]
+    },
+    "web#build": {
+      "dependsOn": ["^api#build"],
+      "outputs": [".next/**"]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  },
+  "globalEnv": ["NODE_ENV", "WG_ALLOWED_ORIGIN", "NEON_DATABASE_URL"]
+}

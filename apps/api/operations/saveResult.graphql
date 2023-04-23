@@ -1,0 +1,21 @@
+mutation (
+  $accuracy: Int!
+  $wpm: Int!
+  $correct: Int!
+  $wrong: Int!
+  $userId: String! @fromClaim(name: USERID)
+  $time: Int!
+) {
+  db_createOneResults(
+    data: {
+      accuracy: $accuracy
+      wpm: $wpm
+      correct: $correct
+      wrong: $wrong
+      time: $time
+      User: { connect: { id: $userId } }
+    }
+  ) {
+    id
+  }
+}
