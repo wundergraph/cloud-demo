@@ -41,10 +41,7 @@ configureWunderGraphApplication({
     ...cors.allowAll,
     allowedOrigins:
       process.env.NODE_ENV === "production"
-        ? [
-            // change this before deploying to production to the actual domain where you're deploying your app
-            "http://localhost:3000",
-          ]
+        ? [new EnvironmentVariable("WG_ALLOWED_ORIGIN")]
         : [
             "http://localhost:3000",
             "http://127.0.0.1:3000/",
@@ -54,15 +51,15 @@ configureWunderGraphApplication({
   authentication: {
     cookieBased: {
       providers: [authProviders.demo()],
-      authorizedRedirectUris: [new EnvironmentVariable("NEXT_PUBLIC_URL")],
+      authorizedRedirectUris: [
+        new EnvironmentVariable("NEXT_PUBLIC_URL", "http://localhost:3000"),
+      ],
     },
   },
   dotGraphQLConfig: {
     hasDotWunderGraphDirectory: false,
   },
   security: {
-    enableGraphQLEndpoint:
-      process.env.NODE_ENV !== "production" ||
-      process.env.GITPOD_WORKSPACE_ID !== undefined,
+    enableGraphQLEndpoint: process.env.NODE_ENV !== "production",
   },
 });

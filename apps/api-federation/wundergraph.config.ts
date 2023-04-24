@@ -1,4 +1,5 @@
 import {
+  EnvironmentVariable,
   authProviders,
   configureWunderGraphApplication,
   cors,
@@ -60,13 +61,19 @@ configureWunderGraphApplication({
     ...cors.allowAll,
     allowedOrigins:
       process.env.NODE_ENV === "production"
-        ? ["http://localhost:3001"]
-        : ["http://localhost:3001"],
+        ? [new EnvironmentVariable("WG_ALLOWED_ORIGIN")]
+        : [
+            "http://localhost:3001",
+            "http://127.0.0.1:3001/",
+            new EnvironmentVariable("WG_ALLOWED_ORIGIN"),
+          ],
   },
   authentication: {
     cookieBased: {
       providers: [authProviders.demo()],
-      authorizedRedirectUris: ["http://localhost:3001"],
+      authorizedRedirectUris: [
+        new EnvironmentVariable("NEXT_PUBLIC_URL", "http://localhost:3001"),
+      ],
     },
   },
   dotGraphQLConfig: {
