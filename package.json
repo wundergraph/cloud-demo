@@ -7,15 +7,16 @@
   "scripts": {
     "build": "dotenv -- turbo run build",
     "dev": "dotenv -- turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "generate": "turbo run generate"
+    "generate": "turbo run generate",
+    "start:services": "cd federation && docker-compose up -d && cd .. && cd database && docker compose up -d"
   },
   "devDependencies": {
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.11",
     "turbo": "latest",
     "prisma": "^4.7.1",
-    "dotenv-cli": "latest"
+    "dotenv-cli": "latest",
+    "wait-on": "^6.0.1"
   },
   "engines": {
     "node": ">=18.0.0"

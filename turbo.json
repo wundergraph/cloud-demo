@@ -9,11 +9,16 @@
         "!.next/cache/**",
         ".vercel/**",
         "generated-wundergraph/**",
+        "generated-federation/**",
         "generated/**"
       ]
     },
     "web#build": {
       "dependsOn": ["^api#build"],
+      "outputs": [".next/**"]
+    },
+    "web-federation#build": {
+      "dependsOn": ["^api-federation#build"],
       "outputs": [".next/**"]
     },
     "lint": {

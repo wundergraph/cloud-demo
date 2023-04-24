@@ -2,13 +2,8 @@
   "name": "ui",
   "version": "0.0.0",
   "description": "Styles and components for use in svelte websites",
-  "type": "module",
   "module": "index.ts",
   "license": "MIT",
-  "scripts": {
-    "lint": "prettier --check --ignore-path=../../.prettierignore .",
-    "format": "prettier --write --ignore-path=../../.prettierignore ."
-  },
   "devDependencies": {
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",

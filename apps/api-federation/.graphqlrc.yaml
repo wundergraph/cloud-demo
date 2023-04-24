@@ -1,0 +1,12 @@
+# This file provides autocompletion in .graphql files
+# Some IDEs, like VS code require this file to be at the
+# root of your workspace. If you move it around, make sure
+# to update schema and documents with the new paths.
+schema: "generated/wundergraph.schema.graphql"
+documents: "operations/**/*.graphql"
+extensions:
+  endpoint:
+    introspect: false
+    url: "http://localhost:8881/graphql"
+    headers:
+      user-agent: "WunderGraph Client"

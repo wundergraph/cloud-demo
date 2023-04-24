@@ -78,7 +78,7 @@ const Stats = () => {
 
   return (
     <Container title="Stats | SwiftKeys">
-      <div className="container relative mx-auto h-full w-full overflow-x-hidden px-4 pb-12">
+      <main className="container relative mx-auto flex h-screen flex-col px-4 pb-12">
         <Navbar />
         <div className="flex flex-col gap-12 rounded-lg bg-zinc-700 px-6 py-8 xl:flex-row xl:items-center">
           <div className="flex items-center gap-x-6">
@@ -100,7 +100,7 @@ const Stats = () => {
               </p>
             </div>
           </div>
-          <div className="grid w-full flex-1 grid-cols-2 items-center justify-between gap-y-8 gap-x-4 xl:flex">
+          <div className="grid w-full flex-1 grid-cols-2 items-center justify-between gap-x-4 gap-y-8 xl:flex">
             <div className="col-span-2 h-36 w-full rounded-lg bg-zinc-600 p-4 xl:w-64">
               <table className="table w-full table-fixed text-left">
                 <thead>
@@ -207,22 +207,22 @@ const Stats = () => {
           <table className="mt-12 w-full table-auto text-left text-xs md:text-sm xl:text-base">
             <thead className="bg-zinc-800 uppercase text-zinc-400">
               <tr>
-                <th scope="col" className="py-3 px-6">
+                <th scope="col" className="px-6 py-3">
                   WPM
                 </th>
-                <th scope="col" className="py-3 px-6">
+                <th scope="col" className="px-6 py-3">
                   Accuracy
                 </th>
-                <th scope="col" className="py-3 px-6">
+                <th scope="col" className="px-6 py-3">
                   Correct words
                 </th>
-                <th scope="col" className="py-3 px-6">
+                <th scope="col" className="px-6 py-3">
                   Wrong words
                 </th>
-                <th scope="col" className="py-3 px-6">
+                <th scope="col" className="px-6 py-3">
                   Duration
                 </th>
-                <th scope="col" className="py-3 px-6">
+                <th scope="col" className="px-6 py-3">
                   Date
                 </th>
               </tr>
@@ -234,12 +234,12 @@ const Stats = () => {
                   ({ id, wpm, accuracy, correct, wrong, time, createdAt }) => {
                     return (
                       <tr className="w-full border-b border-zinc-500" key={id}>
-                        <td className="py-4 px-6">{wpm}</td>
-                        <td className="py-4 px-6">{accuracy}%</td>
-                        <td className="py-4 px-6">{correct}</td>
-                        <td className="py-4 px-6">{wrong}</td>
-                        <td className="py-4 px-6">{time}s</td>
-                        <td className="py-4 px-6">
+                        <td className="px-6 py-4">{wpm}</td>
+                        <td className="px-6 py-4">{accuracy}%</td>
+                        <td className="px-6 py-4">{correct}</td>
+                        <td className="px-6 py-4">{wrong}</td>
+                        <td className="px-6 py-4">{time}s</td>
+                        <td className="px-6 py-4">
                           {format(new Date(createdAt), "dd MMM yyyy")}
                         </td>
                       </tr>
@@ -249,7 +249,7 @@ const Stats = () => {
             </tbody>
           </table>
         </div>
-      </div>
+      </main>
     </Container>
   );
 };

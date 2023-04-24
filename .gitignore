@@ -37,6 +37,8 @@ yarn-error.log*
 # Wundergraph
 **/generated-wundergraph/*
 !**/generated-wundergraph/package.json
+**/generated-federation/*
+!**/generated-federation/package.json
 **/generated
 
 # ui

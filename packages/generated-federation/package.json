@@ -1,0 +1,10 @@
+{
+  "name": "generated-federation",
+  "version": "0.0.0",
+  "main": "nextjs.ts",
+  "types": "nextjs.ts",
+  "license": "MIT",
+  "dependencies": {
+    "api": "^1.0.0"
+  }
+}
