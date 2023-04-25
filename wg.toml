@@ -6,7 +6,9 @@ version = 1
 [[projects]]
 name = "speedtest-nextjs-postgres" # The name of cloud project
 workspace = "/apps/api"
+build_command = "npx turbo run build --filter=api"
 
 [[projects]]
 name = "apollo-federation-nextjs"
 workspace = "/apps/api-federation"
+build_command = "npx turbo run build --filter=api-federation"
