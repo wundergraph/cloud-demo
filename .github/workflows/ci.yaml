@@ -1,6 +1,10 @@
 name: CI
+
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
@@ -12,13 +16,23 @@ jobs:
   build_test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 'lts/*'
-        cache: 'npm'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+          cache: "npm"
 
-    - run: npm ci
+      - run: npm ci
 
-    - run: npm run build
+      - name: Build
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action == 'opened')
+        env:
+          NEON_DATABASE_URL: ${{secrets.NEON_DATABASE_URL}}
+        run: npm run build
+
+      - name: Apply Prisma Migrations
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          NEON_DATABASE_URL: ${{secrets.NEON_DATABASE_URL}}
+        run: npx prisma migrate dev
