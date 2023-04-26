@@ -57,9 +57,10 @@ configureWunderGraphApplication({
           clientSecret: new EnvironmentVariable("GOOGLE_CLIENT_SECRET", ""),
         }),
       ],
-      authorizedRedirectUris: [
-        new EnvironmentVariable("NEXT_PUBLIC_URL", "http://localhost:3000"),
-      ],
+      authorizedRedirectUris:
+        process.env.NODE_ENV === "production"
+          ? ["https://speedtest-cloud-demo.vercel.app"]
+          : ["http://localhost:3000"],
     },
   },
   dotGraphQLConfig: {
