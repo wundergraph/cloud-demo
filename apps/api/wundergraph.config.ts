@@ -50,13 +50,7 @@ configureWunderGraphApplication({
   },
   authentication: {
     cookieBased: {
-      providers: [
-        authProviders.google({
-          id: "google",
-          clientId: new EnvironmentVariable("GOOGLE_CLIENT_ID", ""),
-          clientSecret: new EnvironmentVariable("GOOGLE_CLIENT_SECRET", ""),
-        }),
-      ],
+      providers: [authProviders.demo()],
       authorizedRedirectUris: [
         new EnvironmentVariable("NEXT_PUBLIC_URL", "http://localhost:3000"),
       ],
