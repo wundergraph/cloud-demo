@@ -47,6 +47,7 @@ configureWunderGraphApplication({
     listenInternal: {
       port: "8883",
     },
+    publicNodeUrl: process.env.WG_PUBLIC_NODE_URL,
   },
   codeGenerators: [
     {
