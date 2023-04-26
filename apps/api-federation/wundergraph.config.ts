@@ -61,7 +61,7 @@ configureWunderGraphApplication({
     ...cors.allowAll,
     allowedOrigins:
       process.env.NODE_ENV === "production"
-        ? [new EnvironmentVariable("NEXT_PUBLIC_URL")]
+        ? [process.env.NEXT_PUBLIC_URL as string]
         : [
             "http://localhost:3001",
             "http://127.0.0.1:3001/",
