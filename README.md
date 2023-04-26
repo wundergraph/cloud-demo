@@ -11,7 +11,7 @@ It contains 2 applications.
 
 ```shell
 npm install
-npm run start:services
+npm run start:services #optional
 npm run build
 npm run dev
 ```
