@@ -4,7 +4,7 @@ mutation (
   $name: String!
   $picture: String
   $now: DateTime! @injectCurrentDateTime
-) @internalOperation {
+) {
   db_upsertOneUser(
     where: { email: $email }
     update: { lastLogin: { set: $now } }

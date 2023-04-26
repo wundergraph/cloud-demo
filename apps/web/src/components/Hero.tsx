@@ -17,7 +17,7 @@ const Hero = () => {
         leftIcon={<FaGoogle />}
         className="mt-12"
         onClick={() => {
-          login(AuthProviderId.github);
+          login(AuthProviderId.google);
         }}
       >
         Login to start

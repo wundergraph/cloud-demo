@@ -68,14 +68,6 @@ configureWunderGraphApplication({
             new EnvironmentVariable("WG_ALLOWED_ORIGIN"),
           ],
   },
-  authentication: {
-    cookieBased: {
-      providers: [authProviders.demo()],
-      authorizedRedirectUris: [
-        new EnvironmentVariable("NEXT_PUBLIC_URL", "http://localhost:3001"),
-      ],
-    },
-  },
   dotGraphQLConfig: {
     hasDotWunderGraphDirectory: false,
   },

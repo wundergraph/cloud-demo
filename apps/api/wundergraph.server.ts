@@ -17,7 +17,7 @@ export default configureWunderGraphServer<HooksConfig, InternalClient>(() => ({
           };
         }
         log.info(`User authenticated: ${user.email}`);
-        const result = await internalClient.mutations.User({
+        const result = await internalClient.mutations.InternalUser({
           input: {
             email: user.email,
             name: user.name,
