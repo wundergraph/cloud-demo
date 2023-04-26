@@ -22,9 +22,6 @@ const db = introspect.postgresql({
 configureWunderGraphApplication({
   apis: [db],
   server,
-  options: {
-    publicNodeUrl: process.env.WG_PUBLIC_NODE_URL,
-  },
   operations,
   codeGenerators: [
     {
