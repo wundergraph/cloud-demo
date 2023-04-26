@@ -50,6 +50,9 @@ configureWunderGraphApplication({
   },
   authentication: {
     cookieBased: {
+      secureCookieBlockKey: new EnvironmentVariable("SECURE_COOKIE_BLOCK_KEY"),
+      secureCookieHashKey: new EnvironmentVariable("SECURE_COOKIE_HASH_KEY"),
+      csrfTokenSecret: new EnvironmentVariable("CSRF_TOKEN_SECRET"),
       providers: [
         authProviders.google({
           id: "google",
