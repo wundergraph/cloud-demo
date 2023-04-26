@@ -61,7 +61,7 @@ configureWunderGraphApplication({
     ...cors.allowAll,
     allowedOrigins:
       process.env.NODE_ENV === "production"
-        ? [process.env.NEXT_PUBLIC_URL as string]
+        ? ["https://apollo-federation-cloud-demo.vercel.app"]
         : [
             "http://localhost:3001",
             "http://127.0.0.1:3001/",
