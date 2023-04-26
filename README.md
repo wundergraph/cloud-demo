@@ -18,4 +18,4 @@ npm run dev
 
 ### Learn More
 
-Read the [Docs](https://wundergraph.com/docs)
+Read the [Docs](https://wundergraph.com/docs).
