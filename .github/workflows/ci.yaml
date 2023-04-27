@@ -35,4 +35,11 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
           NEON_DATABASE_URL: ${{secrets.NEON_DATABASE_URL}}
-        run: npx prisma migrate deploy
+        run: |
+          n=1
+          until n==6
+          do
+            npx prisma migrate deploy && break
+            n=$[$n+1]
+            sleep 3
+          done
