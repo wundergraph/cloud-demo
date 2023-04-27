@@ -16,7 +16,7 @@ const db = introspect.postgresql({
   introspection: {
     pollingIntervalSeconds: 5,
   },
-  requestTimeoutSeconds: 60,
+  requestTimeoutSeconds: 45,
 });
 
 // configureWunderGraph emits the configuration
