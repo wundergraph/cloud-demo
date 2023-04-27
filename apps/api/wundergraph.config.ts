@@ -42,7 +42,7 @@ configureWunderGraphApplication({
     ...cors.allowAll,
     allowedOrigins:
       process.env.NODE_ENV === "production"
-        ? ["https://speedtest-cloud-demo.vercel.app"]
+        ? ["https://speedtest.wundergraph.app"]
         : [
             "http://localhost:3000",
             "http://127.0.0.1:3000/",
@@ -60,7 +60,7 @@ configureWunderGraphApplication({
       ],
       authorizedRedirectUris:
         process.env.NODE_ENV === "production"
-          ? ["https://speedtest-cloud-demo.vercel.app"]
+          ? ["https://speedtest.wundergraph.app"]
           : ["http://localhost:3000"],
     },
   },
