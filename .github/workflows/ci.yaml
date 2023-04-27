@@ -31,4 +31,4 @@ jobs:
       - name: Apply Prisma Migrations
         env:
           NEON_DATABASE_URL: ${{secrets.NEON_DATABASE_URL}}
-        run: npx prisma migrate dev
+        run: npx prisma migrate deploy
