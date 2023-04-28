@@ -4,7 +4,7 @@ This starter combines [WunderGraph](https://wundergraph.com/) Cloud with [Turbor
 
 It contains 2 applications.
 
-1. `api + web` is a typing speed test build with wundergraph + nextjs + postgres
+1. `api + web` is a typing speed test built with wundergraph + nextjs + postgres
    - Frontend hosted at https://speedtest.wundergraph.app
    - WunderNode hosted at https://speedtest-api.wundergraph.app
 2. `api-federation + web-federation` demonstrates wundergraph with apollo federation
@@ -26,4 +26,4 @@ Read the [Docs](https://wundergraph.com/docs).
 
 ### Contributing
 
-Feel free to contribute or improve the demo as you see like by raising a PR.
+Feel free to contribute or improve the demo as you like by raising a PR.
