@@ -8,8 +8,8 @@ It contains 2 applications.
    - Frontend hosted at https://speedtest.wundergraph.app
    - WunderNode hosted at https://speedtest-api.wundergraph.app
 2. `api-federation + web-federation` demonstrates wundergraph with apollo federation
-   - Frontend hosted at https://apollo-federation-cloud-demo.vercel.app/
-   - WunderNode hosted at https://apollo-federation-nextjs.wundergraph.dev/
+   - Frontend hosted at https://apollo-federation-cloud-demo.vercel.app
+   - WunderNode hosted at https://apollo-federation-nextjs.wundergraph.dev
 
 ### Getting started locally
 
