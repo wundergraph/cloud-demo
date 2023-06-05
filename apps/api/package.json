@@ -10,7 +10,7 @@
   "author": "",
   "dependencies": {
     "@wundergraph/nextjs": "^0.10.24",
-    "@wundergraph/sdk": "^0.155.0"
+    "@wundergraph/sdk": "^0.163.3"
   },
   "devDependencies": {
     "@types/node": "^17.0.15",

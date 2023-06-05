@@ -1,6 +1,5 @@
 import {
   EnvironmentVariable,
-  authProviders,
   configureWunderGraphApplication,
   cors,
   introspect,
