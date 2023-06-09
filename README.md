@@ -2,7 +2,7 @@
 
 This starter combines [WunderGraph](https://wundergraph.com/) Cloud with [Turborepo](https://github.com/vercel/turbo) to create an optimized monorepo experience for your WunderGraph application.
 
-It contains 2 applications.
+It contains 2 applications:
 
 1. `api + web` is a typing speed test built with wundergraph + nextjs + postgres
    - Frontend hosted at https://speedtest.wundergraph.app
