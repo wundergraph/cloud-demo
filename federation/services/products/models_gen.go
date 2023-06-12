@@ -4,9 +4,9 @@ package products
 
 type Product struct {
 	Upc    string  `json:"upc"`
-	Name   *string `json:"name"`
-	Price  *int    `json:"price"`
-	Weight *int    `json:"weight"`
+	Name   *string `json:"name,omitempty"`
+	Price  *int    `json:"price,omitempty"`
+	Weight *int    `json:"weight,omitempty"`
 }
 
 func (Product) IsEntity() {}

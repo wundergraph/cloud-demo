@@ -6,6 +6,8 @@ kill_timeout = 5
 processes = []
 
 [env]
+WG_OTEL_HTTP_ENDPOINT = "otel.wundergraph.com"
+ENV = "production"
 
 [experimental]
   auto_rollback = true

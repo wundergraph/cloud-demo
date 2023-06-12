@@ -9,8 +9,8 @@
   },
   "author": "",
   "dependencies": {
-    "@wundergraph/nextjs": "^0.10.24",
-    "@wundergraph/sdk": "^0.163.3"
+    "@wundergraph/nextjs": "^0.11.10",
+    "@wundergraph/sdk": "^0.165.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.15",
