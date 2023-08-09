@@ -20,6 +20,8 @@ npm run build
 npm run dev
 ```
 
+This repository uses the custom wg.toml to override build commands on cloud.
+
 ### Learn More
 
 Read the [Docs](https://wundergraph.com/docs).
